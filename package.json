@@ -5,6 +5,7 @@
   "keywords": [
     "gatsby",
     "gatsbyjs",
+    "gatsby-plugin",
     "react",
     "react-helmet",
     "react-helmet-async"
@@ -22,5 +23,16 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "gatsby": "^2.17.4",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "react-helmet-async": "^1.0.4",
+    "typescript": "^3.7.0-dev.20191021"
+  },
+  "peerDependencies": {
+    "gatsby": ">=2.0.0",
+    "react-helmet-async": ">=1.0.0"
   }
 }
