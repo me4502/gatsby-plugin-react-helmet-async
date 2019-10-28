@@ -1,5 +1,7 @@
 import { GatsbySSR, RenderBodyArgs, WrapRootElementNodeArgs } from 'gatsby'
 import React from 'react'
+// The `react-helmet` import is only being used for types, not the package.
+// eslint-disable-next-line import/no-unresolved
 import { HelmetData } from 'react-helmet'
 import { HelmetProvider } from 'react-helmet-async'
 
@@ -8,7 +10,7 @@ const context: { helmet?: HelmetData } = {}
 export const onRenderBody: GatsbySSR['onRenderBody'] = ({
   setHeadComponents,
   setHtmlAttributes,
-  setBodyAttributes
+  setBodyAttributes,
 }: RenderBodyArgs): any => {
   const { helmet } = context
 
@@ -28,7 +30,7 @@ export const onRenderBody: GatsbySSR['onRenderBody'] = ({
 }
 
 export const wrapRootElement: GatsbySSR['wrapRootElement'] = (
-  { element }: WrapRootElementNodeArgs
+  { element }: WrapRootElementNodeArgs,
 ): any => (
   <HelmetProvider context={context}>{element}</HelmetProvider>
 )
