@@ -12,12 +12,10 @@ This is important not just for site viewers, but also for SEO — title and desc
 
 ## How to install
 
-> If you're using NPM, replace `yarn add` with `npm i`.
-
-I promise this will get shorter after I publish the package:
+If you're using NPM, replace `yarn add` with `npm i`:
 
 ```bash
-yarn add react-helmet-async gatsby-plugin-react-helmet-async@Collabsalot/gatsby-plugin-react-helmet-async#master
+yarn add react-helmet-async gatsby-plugin-react-helmet-async
 ```
 
 `react-helmet-async` requires your `react` and `react-dom` to be at least `16.6.0`. If they're older than that, you'll need to upgrade them:
