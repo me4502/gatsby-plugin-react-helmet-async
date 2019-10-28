@@ -1,0 +1,26 @@
+{
+  "name": "gatsby-plugin-react-helmet-async",
+  "version": "0.0.1",
+  "description": "Use react-helmet-async with Gatsby",
+  "keywords": [
+    "gatsby",
+    "gatsbyjs",
+    "react",
+    "react-helmet",
+    "react-helmet-async"
+  ],
+  "homepage": "https://github.com/Collabsalot/gatsby-plugin-react-helmet-async#readme",
+  "bugs": {
+    "url": "https://github.com/Collabsalot/gatsby-plugin-react-helmet-async/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Collabsalot/gatsby-plugin-react-helmet-async.git"
+  },
+  "license": "Apache-2.0",
+  "author": "Martin Rosenberg <Martin.B.Rosenberg@gmail.com> (https://martinbrosenberg.com)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
