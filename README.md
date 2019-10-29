@@ -3,8 +3,6 @@
 ![Code size](https://img.shields.io/github/languages/code-size/Collabsalot/gatsby-plugin-react-helmet-async)
 ![Repo size](https://img.shields.io/github/repo-size/Collabsalot/gatsby-plugin-react-helmet-async)
 
-# gatsby-plugin-react-helmet-async
-
 ## Description
 
 Provides drop-in support for server rendering data added with [React Helmet Async](https://github.com/staylor/react-helmet-async).
