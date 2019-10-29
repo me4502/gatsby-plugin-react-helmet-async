@@ -1,3 +1,8 @@
+[![NPM package downloads](https://img.shields.io/npm/dt/gatsby-plugin-react-helmet-async)](https://www.npmjs.com/package/gatsby-plugin-react-helmet-async)
+[![Depfu](https://img.shields.io/depfu/Collabsalot/gatsby-plugin-react-helmet-async)](https://depfu.com/repos/github/Collabsalot/gatsby-plugin-react-helmet-async)
+![Code size](https://img.shields.io/github/languages/code-size/Collabsalot/gatsby-plugin-react-helmet-async)
+![Repo size](https://img.shields.io/github/repo-size/Collabsalot/gatsby-plugin-react-helmet-async)
+
 # gatsby-plugin-react-helmet-async
 
 ## Description
