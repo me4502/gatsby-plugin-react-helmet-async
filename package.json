@@ -30,7 +30,7 @@
     "@types/react-helmet": "^5.0.13",
     "@types/react-helmet-async": "^1.0.1",
     "@typescript-eslint/eslint-plugin": "^2.5.0",
-    "@typescript-eslint/parser": "^2.5.0",
+    "@typescript-eslint/parser": "^2.6.0",
     "eslint": "^6.6.0",
     "eslint-config-standard-react": "^9.2.0",
     "eslint-config-standard-with-typescript": "^10.0.0",
