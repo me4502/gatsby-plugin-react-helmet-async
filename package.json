@@ -31,7 +31,7 @@
     "@types/react-helmet-async": "^1.0.3",
     "@typescript-eslint/eslint-plugin": "^2.9.0",
     "@typescript-eslint/parser": "^2.9.0",
-    "eslint": "^6.7.0",
+    "eslint": "^6.7.1",
     "eslint-config-standard-react": "^9.2.0",
     "eslint-config-standard-with-typescript": "^10.0.0",
     "eslint-plugin-import": "^2.18.2",
