@@ -34,7 +34,7 @@ yarn add react@^16.6.0 react-dom@^16.6.0
 This package includes its own types, as does Gatsby. To get types for the other packages, you'll need to install them separately:
 
 ```bash
-yarn add -D @types/react-helmet-async @types/react @types/react-dom
+yarn add -D @types/react @types/react-dom
 ```
 
 ## How to use
