@@ -31,7 +31,7 @@ yarn add react@^16.6.0 react-dom@^16.6.0
 
 ### Using TypeScript
 
-This package includes its own types, as does Gatsby. To get types for the other packages, you'll need to install them separately:
+This package includes its own types, as do `gatsby` and `react-helmet-async`. To get types for the other packages, you'll need to install them separately:
 
 ```bash
 yarn add -D @types/react @types/react-dom
