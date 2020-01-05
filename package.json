@@ -1,6 +1,6 @@
 {
   "name": "gatsby-plugin-react-helmet-async",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "description": "Use react-helmet-async with Gatsby",
   "keywords": [
     "gatsby",
