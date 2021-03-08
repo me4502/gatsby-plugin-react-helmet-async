@@ -17,7 +17,7 @@ This is important not just for site viewers, but also for SEO — title and desc
 
 ## How to install
 
-If you're using NPM, replace `yarn add` with `npm i`:
+Replace `yarn add` with `npm i` if you're using npm, or `pnpm add` for pnpm:
 
 ```bash
 yarn add react-helmet-async gatsby-plugin-react-helmet-async
