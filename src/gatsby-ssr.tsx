@@ -1,9 +1,6 @@
 import { GatsbySSR, RenderBodyArgs, WrapRootElementNodeArgs } from 'gatsby'
 import React from 'react'
-// The `react-helmet` import is only being used for types, not the package.
-// eslint-disable-next-line import/no-unresolved
-import { HelmetData } from 'react-helmet'
-import { HelmetProvider } from 'react-helmet-async'
+import { HelmetData, HelmetProvider } from 'react-helmet-async'
 
 const context: { helmet?: HelmetData } = {}
 
