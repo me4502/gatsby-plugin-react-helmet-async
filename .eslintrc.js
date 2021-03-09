@@ -1,10 +1,18 @@
+const ERROR = 2
+const WARN = 1
+const OFF = 0
+
 /**
- * @see https://eslint.org/docs/user-guide/configuring
+ * Not using `gatsby-plugin-eslint`, as it's outdated and doesn't really
+ * accomplish anything that hasn't been taken care of already. Feel free to look
+ * into it for yourself: https://www.gatsbyjs.org/packages/gatsby-plugin-eslint/
+ *
+ * @see https://eslint.org/docs/user-guide/configuring/
+ * @type {eslint.BaseConfig}
  */
-const config = {
+module.exports = {
   /**
-   * @see https://eslint.org/docs/user-guide/configuring#specifying-environments
-   * @type {Object.<string, boolean>}
+   * @type {eslint.BaseConfig.env}
    */
   env: {
     browser: true,
@@ -13,29 +21,18 @@ const config = {
   },
 
   /**
-   * @see https://eslint.org/docs/user-guide/configuring#extending-configuration-files
    * @see https://github.com/standard/eslint-config-standard-react
    * @see https://github.com/standard/eslint-config-standard-with-typescript
    * @see https://github.com/benmosher/eslint-plugin-import
-   * @see https://eslint.org/docs/user-guide/configuring#extending-configuration-files
-   * @see https://www.npmjs.com/package/@typescript-eslint/eslint-plugin
-   * @see https://github.com/prettier/eslint-config-prettier
-   * @type {string[]}
    */
   extends: [
     'standard-react',
     'standard-with-typescript',
-    'plugin:@typescript-eslint/recommended',
-    'plugin:@typescript-eslint/recommended-requiring-type-checking',
     'plugin:import/errors',
-    'plugin:import/typescript',
     'plugin:import/warnings',
+    'prettier',
   ],
 
-  /**
-   * @see https://eslint.org/docs/user-guide/configuring#specifying-globals
-   * @type {Object.<string, any>}
-   */
   globals: {
     __PATH_PREFIX__: true,
     Atomics: 'readonly',
@@ -43,15 +40,12 @@ const config = {
   },
 
   /**
-   * @see https://eslint.org/docs/user-guide/configuring#specifying-parser
-   * @see https://www.npmjs.com/package/@typescript-eslint/parser
-   * @type {string}
+   * @see https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/parser
    */
   parser: '@typescript-eslint/parser',
 
   /**
-   * @see https://eslint.org/docs/user-guide/configuring#specifying-parser-options
-   * @type {Object.<string, any>}
+   * @type {eslint.BaseConfig.parserOptions}
    */
   parserOptions: {
     ecmaFeatures: {
@@ -64,36 +58,50 @@ const config = {
   },
 
   /**
-   * @see https://eslint.org/docs/user-guide/configuring#configuring-plugins
    * @see https://github.com/yannickcr/eslint-plugin-react
-   * @see https://github.com/standard/eslint-plugin-standard
-   * @see https://eslint.org/docs/user-guide/configuring#configuring-plugins
-   * @see https://www.npmjs.com/package/@typescript-eslint/eslint-plugin
-   * @type {string[]}
    */
-  plugins: ['@typescript-eslint', 'react'],
+  plugins: ['react'],
 
-  /**
-   * @see https://eslint.org/docs/user-guide/configuring#configuring-rules
-   * @see https://github.com/yannickcr/eslint-plugin-react
-   * @see https://www.npmjs.com/package/@typescript-eslint/eslint-plugin
-   * @type {Object.<string, any>}
-   */
   rules: {
-    'comma-dangle': ['error', 'always-multiline'],
-    '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
-    '@typescript-eslint/no-explicit-any': 'off',
+    'comma-dangle': [WARN, 'always-multiline'],
+    'no-cond-assign': [ERROR, 'always'],
+    'quote-props': [WARN, 'consistent-as-needed'],
   },
 
   /**
-   * @see https://eslint.org/docs/user-guide/configuring#adding-shared-settings
-   * @type {Object.<string, any>}
+   * @type {eslint.BaseConfig.settings}
    */
   settings: {
     react: {
       version: 'detect',
     },
   },
-}
 
-module.exports = config
+  overrides: [
+    {
+      files: ['*.ts', '*.tsx'],
+
+      extends: [
+        'plugin:@typescript-eslint/recommended',
+        'plugin:@typescript-eslint/recommended-requiring-type-checking',
+        'plugin:import/typescript',
+      ],
+
+      /**
+       * @see https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin
+       */
+      plugins: ['@typescript-eslint'],
+
+      /**
+       * @see https://github.com/yannickcr/eslint-plugin-react
+       */
+      rules: {
+        'react/prop-types': OFF,
+        '@typescript-eslint/consistent-type-definitions': [ERROR, 'type'],
+        '@typescript-eslint/explicit-function-return-type': ERROR,
+        '@typescript-eslint/require-await': OFF,
+        '@typescript-eslint/strict-boolean-expressions': OFF,
+      },
+    },
+  ],
+}
