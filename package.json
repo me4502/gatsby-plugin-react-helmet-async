@@ -43,7 +43,7 @@
     "typescript": "^4.3.4"
   },
   "peerDependencies": {
-    "gatsby": "2.x || 3.x",
+    "gatsby": ">=2",
     "react": "^16.6.0 || 17.x",
     "react-dom": "^16.6.0 || 17.x",
     "react-helmet-async": "1.x"
