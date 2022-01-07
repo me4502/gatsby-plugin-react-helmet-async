@@ -5,6 +5,8 @@
 
 # gatsby-plugin-react-helmet-async
 
+**_I no longer want to maintain this. If you are interested in taking over, please let me know._**
+
 ## Description
 
 Provides drop-in support for server rendering data added with [React Helmet Async](https://github.com/staylor/react-helmet-async).
