@@ -15,6 +15,7 @@ export const onRenderBody: GatsbySSR['onRenderBody'] = ({
     setHeadComponents([
       helmet.base.toComponent(),
       helmet.title.toComponent(),
+      helmet.priority.toComponent(),
       helmet.meta.toComponent(),
       helmet.link.toComponent(),
       helmet.style.toComponent(),
