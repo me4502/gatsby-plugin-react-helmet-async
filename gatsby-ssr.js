@@ -14,11 +14,12 @@ var onRenderBody = function (_a) {
         setHeadComponents([
             helmet.base.toComponent(),
             helmet.title.toComponent(),
+            helmet.priority.toComponent(),
             helmet.meta.toComponent(),
             helmet.link.toComponent(),
             helmet.style.toComponent(),
             helmet.script.toComponent(),
-            helmet.noscript.toComponent(),
+            helmet.noscript.toComponent()
         ]);
         setHtmlAttributes(helmet.htmlAttributes.toComponent());
         setBodyAttributes(helmet.bodyAttributes.toComponent());
