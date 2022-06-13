@@ -1,7 +1,7 @@
 [![NPM package downloads](https://img.shields.io/npm/dt/gatsby-plugin-react-helmet-async)](https://www.npmjs.com/package/gatsby-plugin-react-helmet-async)
-[![Depfu](https://img.shields.io/depfu/Collabsalot/gatsby-plugin-react-helmet-async)](https://depfu.com/repos/github/Collabsalot/gatsby-plugin-react-helmet-async)
-![Code size](https://img.shields.io/github/languages/code-size/Collabsalot/gatsby-plugin-react-helmet-async)
-![Repo size](https://img.shields.io/github/repo-size/Collabsalot/gatsby-plugin-react-helmet-async)
+[![Depfu](https://img.shields.io/depfu/Me4502/gatsby-plugin-react-helmet-async)](https://depfu.com/repos/github/Me4502/gatsby-plugin-react-helmet-async)
+![Code size](https://img.shields.io/github/languages/code-size/Me4502/gatsby-plugin-react-helmet-async)
+![Repo size](https://img.shields.io/github/repo-size/Me4502/gatsby-plugin-react-helmet-async)
 
 # gatsby-plugin-react-helmet-async
 
@@ -24,7 +24,7 @@ yarn add react-helmet-async gatsby-plugin-react-helmet-async
 ```
 
 `react-helmet-async` requires your `react` and `react-dom` to be at least `16.6.0`. If they're older than that, you'll need to upgrade them:
- 
+
 ```bash
 yarn add react@^16.6.0 react-dom@^16.6.0
 ```
@@ -43,8 +43,6 @@ Just add the plugin to the plugins array in your `gatsby-config.js`:
 
 ```js
 module.exports = {
-  plugins: [
-    `gatsby-plugin-react-helmet-async`,
-  ]
-}
+    plugins: [`gatsby-plugin-react-helmet-async`]
+};
 ```

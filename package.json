@@ -9,13 +9,13 @@
         "react-helmet",
         "react-helmet-async"
     ],
-    "homepage": "https://github.com/Collabsalot/gatsby-plugin-react-helmet-async#readme",
+    "homepage": "https://github.com/Me4502/gatsby-plugin-react-helmet-async#readme",
     "bugs": {
-        "url": "https://github.com/Collabsalot/gatsby-plugin-react-helmet-async/issues"
+        "url": "https://github.com/Me4502/gatsby-plugin-react-helmet-async/issues"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/Collabsalot/gatsby-plugin-react-helmet-async.git"
+        "url": "git+https://github.com/Me4502/gatsby-plugin-react-helmet-async.git"
     },
     "license": "Apache-2.0",
     "author": "Martin Rosenberg <Martin.B.Rosenberg@gmail.com> (https://martinbrosenberg.com)",
