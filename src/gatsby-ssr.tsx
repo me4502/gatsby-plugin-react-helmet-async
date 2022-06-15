@@ -11,7 +11,7 @@ export const onRenderBody: GatsbySSR['onRenderBody'] = ({
 }: RenderBodyArgs): void => {
     const { helmet } = context;
 
-    if (helmet != null) {
+    if (helmet) {
         setHeadComponents([
             helmet.base.toComponent(),
             helmet.title.toComponent(),

@@ -10,7 +10,7 @@ var context = {};
 var onRenderBody = function (_a) {
     var setHeadComponents = _a.setHeadComponents, setHtmlAttributes = _a.setHtmlAttributes, setBodyAttributes = _a.setBodyAttributes;
     var helmet = context.helmet;
-    if (helmet != null) {
+    if (helmet) {
         setHeadComponents([
             helmet.base.toComponent(),
             helmet.title.toComponent(),

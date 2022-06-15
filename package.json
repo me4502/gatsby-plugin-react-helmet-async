@@ -1,6 +1,6 @@
 {
     "name": "gatsby-plugin-react-helmet-async",
-    "version": "1.2.1",
+    "version": "1.2.2",
     "description": "Use react-helmet-async with Gatsby",
     "keywords": [
         "gatsby",
@@ -21,12 +21,15 @@
     "author": "Martin Rosenberg <Martin.B.Rosenberg@gmail.com> (https://martinbrosenberg.com)",
     "main": "index.js",
     "scripts": {
+        "prepublish": "yarn build",
         "build": "tsc --build",
         "clean": "rm gatsby-browser.d.ts gatsby-browser.js gatsby-ssr.d.ts gatsby-ssr.js",
         "lint": "eslint src --ext ts,tsx --fix",
         "test": "echo \"Error: no tests specified\" && exit 1"
     },
     "devDependencies": {
+        "@types/react": "^17",
+        "@types/react-dom": "^17",
         "@typescript-eslint/eslint-plugin": "^5.27.1",
         "@typescript-eslint/parser": "^5.27.1",
         "eslint": "^8.17.0",
@@ -52,5 +55,9 @@
         "react": "^16.6.0 || ^17 || ^18",
         "react-dom": "^16.6.0 || ^17 || ^18",
         "react-helmet-async": "1.x"
+    },
+    "resolutions": {
+        "@types/react": "^17",
+        "@types/react-dom": "^17"
     }
 }
