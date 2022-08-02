@@ -12,16 +12,23 @@ export const onRenderBody: GatsbySSR['onRenderBody'] = ({
     const { helmet } = context;
 
     if (helmet) {
-        setHeadComponents([
-            helmet.base.toComponent(),
-            helmet.title.toComponent(),
+        const baseComponent = helmet.base.toComponent();
+        const titleComponent = helmet.title.toComponent() as unknown as any[];
+        const components = [
             helmet.priority.toComponent(),
             helmet.meta.toComponent(),
             helmet.link.toComponent(),
             helmet.style.toComponent(),
             helmet.script.toComponent(),
             helmet.noscript.toComponent()
-        ]);
+        ];
+
+        setHeadComponents(
+            titleComponent[0]?.props.children
+                ? [baseComponent, titleComponent, ...components]
+                : [baseComponent, ...components]
+        );
+
         setHtmlAttributes(helmet.htmlAttributes.toComponent());
         setBodyAttributes(helmet.bodyAttributes.toComponent());
     }
